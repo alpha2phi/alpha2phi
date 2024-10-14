@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~>3.0"
+    }
+  }
+}
+
 provider "azurerm" {
   features {}
 }
@@ -13,28 +22,28 @@ variable "location" {
 variable "rg_name" {
   description = "The name of the Resource Group"
   type        = string
-  default     = "Alpha2phi-rg"  # Default Resource Group name
+  default     = "Alpha2phi"  # Default Resource Group name
 }
 
 # Variable for VNet Name
 variable "vnet_name" {
   description = "The name of the Virtual Network"
   type        = string
-  default     = "Alpha2phi-vnet"  # Default VNet name
+  default     = "Alpha2phi"  # Default VNet name
 }
 
 # Variable for Subnet 1 Name
-variable "subnet1_name" {
+variable "web_subnet" {
   description = "The name of the first subnet"
   type        = string
-  default     = "subnet1"  # Default Subnet 1 name
+  default     = "alpha2phi_web"  # Default Subnet 1 name
 }
 
 # Variable for Subnet 2 Name
-variable "subnet2_name" {
+variable "app_subnet" {
   description = "The name of the second subnet"
   type        = string
-  default     = "subnet2"  # Default Subnet 2 name
+  default     = "alpha2phi_app"  # Default Subnet 2 name
 }
 
 # Resource Group
@@ -52,16 +61,17 @@ resource "azurerm_virtual_network" "alpha2phi_vnet" {
 
   # Subnets
   subnet {
-    name           = var.subnet1_name
+    name           = var.web_subnet
     address_prefix = "10.0.1.0/24"
   }
 
   subnet {
-    name           = var.subnet2_name
+    name           = var.app_subnet
     address_prefix = "10.0.2.0/24"
   }
 }
 
 output "vnet_id" {
+  description = "The name of the created virtual network"
   value = azurerm_virtual_network.alpha2phi_vnet.id
 }

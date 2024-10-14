@@ -2,13 +2,13 @@
 location = "southeastasia"
 
 # Resource Group name
-rg_name = "Alpha2phi-rg"
+rg_name = "Alpha2phi"
 
 # Virtual Network name
-vnet_name = "Alpha2phi-vnet"
+vnet_name = "Alpha2phi"
 
 # Subnet 1 name
-subnet1_name = "subnet1"
+web_subnet = "Alpha2phi_Web"
 
 # Subnet 2 name
-subnet2_name = "subnet2"
+app_subnet = "Alpha2phi_App"
