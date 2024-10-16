@@ -21,7 +21,7 @@ terraform.tfvars
 .crash.log
 
 # Bicep generated JSON files
-*.json
+bicep/*.json
 
 # Ignore Docker files
 **/Dockerfile
