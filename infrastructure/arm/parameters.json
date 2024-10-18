@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "14793d9b-14e2-4a26-ae64-813e7fb5e10b"
+        },
+        "name": {
+            "value": "alpha2phi"
+        },
+        "location": {
+            "value": "Southeast Asia"
+        },
+        "storageBlobContainerName": {
+            "value": "app-package-alpha2phi-11201b0"
+        },
+        "storageAccountName": {
+            "value": "alpha2phi"
+        },
+        "sku": {
+            "value": "FlexConsumption"
+        },
+        "skuCode": {
+            "value": "FC1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "hostingPlanName": {
+            "value": "ASP-Alpha2phi-8fe6"
+        },
+        "serverFarmResourceGroup": {
+            "value": "Alpha2phi"
+        },
+        "alwaysOn": {
+            "value": false
+        }
+    }
+}

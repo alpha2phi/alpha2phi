@@ -21,12 +21,7 @@ terraform.tfvars
 .crash.log
 
 # Bicep generated JSON files
-bicep/*.json
-
-# Ignore Docker files
-**/Dockerfile
-**/docker-compose.yml
-.dockerignore
+**/bicep/*.json
 
 # Logs and temp files
 *.log
@@ -54,19 +49,11 @@ Thumbs.db
 
 # Ignore Azure Pipelines YAML artifacts
 *.coverage
-azure-pipelines.yml
 
 # Ignore build artifacts
 dist/
 build/
 out/
-
-# Ignore lockfiles for npm and Yarn (optional)
-package-lock.json
-yarn.lock
-
-# Ignore GitHub Actions workflows (if present)
-.github/
 
 # Ignore system-specific files
 *.log
