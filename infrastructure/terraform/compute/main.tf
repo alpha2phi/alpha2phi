@@ -90,7 +90,3 @@ output "vnet_id" {
   description = "Virtual network"
   value = azurerm_virtual_network.vnet.id
 }
-
-output "web_subnet_id" {
-  value = data.azurerm_subnet.web_subnet.id
-}
