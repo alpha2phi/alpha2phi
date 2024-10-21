@@ -30,7 +30,7 @@ terraform.tfvars
 *.bak
 
 # VS Code settings and extensions
-.vscode/
+
 *.code-workspace
 
 # Visual Studio
